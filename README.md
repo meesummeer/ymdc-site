@@ -1,6 +1,6 @@
 # YMDC Website
 
-Static site — no build step, no framework. Open `index.html` directly or run any local static server.
+Static site — no build step, no framework. Open `index.html` directly or run any local static server..
 
 ## Structure
 ```
