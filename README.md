@@ -1,6 +1,6 @@
 # YMDC Website
 
-Static site — no build step, no framework. Open `index.html` directly or run any local static server..
+Static site — no build step, no framework. Open `index.html` directly or run any local static server.
 
 ## Structure
 ```
@@ -38,7 +38,19 @@ then visit `http://localhost:8000`
 4. Add the new post's URL to `sitemap.xml`.
 5. (Optional) Swap the homepage's 2nd/3rd blog preview placeholder cards on `index.html` for the new post once you have 3+ real posts.
 
+## Background photos (new)
+The site now has slots for real clinic photography with a low-opacity overlay (not solid colors). Drop these exact filenames into `/images/` and they'll activate automatically — no code changes needed, and the site looks fine without them too (falls back to gradient):
+- `hero-bg-1.jpg`, `hero-bg-2.jpg`, `hero-bg-3.jpg` — hero section, auto-rotates between all three every 6 seconds
+- `departments-bg.jpg` — Departments section background
+- `doctors-bg.jpg` — Doctors section background
+
+Recommended size: 1920×1080 or larger, landscape orientation, compressed to under ~400KB each for load speed (use tinypng.com or similar before uploading).
+
+## Department modal doctor data
+Department → doctor assignments live in `js/main.js` inside the `DEPARTMENTS` object at the top of the file. Edit the `doctors` array for any department to add/remove/update a doctor — the modal and WhatsApp message update automatically.
+
 ## Editable content you'll likely revisit
+
 - **Promotions section** (`index.html`, "Current Promotions") — seasonal, update pricing/offers directly in the HTML.
 - **Doctor cards** (`index.html`, `#doctors`) — update availability if schedules change.
 - **WhatsApp number** — currently `923356733777` in `wa.me` links across all pages; find/replace if it changes.

@@ -18,12 +18,9 @@
 <meta property="og:image" content="https://ymdc.pk/images/logo.png">
 <meta property="og:locale" content="en_PK">
 
-<!-- Favicon -->
 <link rel="icon" type="image/png" href="images/logo.png">
-
 <link rel="stylesheet" href="css/style.css">
 
-<!-- Structured Data: MedicalClinic -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -40,15 +37,7 @@
     "addressCountry": "PK"
   },
   "openingHours": "Mo-Sa 09:00-22:00",
-  "medicalSpecialty": [
-    "Dentistry",
-    "Gynecology",
-    "Otolaryngologic",
-    "Pediatric",
-    "Orthopedic",
-    "Radiography",
-    "PhysicalTherapy"
-  ],
+  "medicalSpecialty": ["Dentistry","Gynecology","Otolaryngologic","Pediatric","Orthopedic","Radiography","PhysicalTherapy"],
   "priceRange": "$$"
 }
 </script>
@@ -63,6 +52,7 @@
       YMDC
     </a>
     <ul class="nav-links">
+      <li><a href="#promotions">Offers</a></li>
       <li><a href="#departments">Departments</a></li>
       <li><a href="#doctors">Doctors</a></li>
       <li><a href="#prosthetics">Prosthetics</a></li>
@@ -76,8 +66,13 @@
   </div>
 </nav>
 
-<!-- ===== HERO ===== -->
+<!-- ===== HERO (photo carousel background) ===== -->
 <header class="hero" id="home">
+  <!-- Drop hero-bg-1.jpg / hero-bg-2.jpg / hero-bg-3.jpg into /images to activate the photo carousel.
+       Until then this fades between navy gradients gracefully. -->
+  <div class="hero-bg-slide active" style="background-image:url('images/hero-bg-1.jpg')"></div>
+  <div class="hero-bg-slide" style="background-image:url('images/hero-bg-2.jpg')"></div>
+  <div class="hero-bg-slide" style="background-image:url('images/hero-bg-3.jpg')"></div>
   <div class="container hero-grid">
     <div>
       <span class="eyebrow" style="color:var(--gold-light)">Main Jinnah Road, Karachi</span>
@@ -106,26 +101,52 @@
   </div>
 </header>
 
-<!-- ===== DEPARTMENTS ===== -->
-<section id="departments">
+<!-- ===== PROMOTIONS (moved up, carousel) ===== -->
+<section id="promotions" class="bg-navy">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" style="color:var(--gold-light)">Limited-time</span>
+      <h2>Current Promotions</h2>
+      <p>Offers below are seasonal — confirm current pricing via WhatsApp before booking.</p>
+    </div>
+    <div class="promo-carousel-wrap">
+      <div class="promo-carousel" id="promoCarousel">
+        <div class="promo-card">
+          <span class="eyebrow" style="color:var(--gold-light)">Combo Offer</span>
+          <h3>Dental Scaling + Hydrafacial</h3>
+          <div class="price">Rs. 8,000</div>
+          <p class="note">Combined dental scaling and Hydrafacial session.</p>
+        </div>
+        <div class="promo-card">
+          <span class="eyebrow" style="color:var(--gold-light)">Aesthetic</span>
+          <h3>Whitening Drip</h3>
+          <div class="price">Rs. 6,000</div>
+          <p class="note">Per session, glutathione whitening infusion.</p>
+        </div>
+        <div class="promo-card">
+          <span class="eyebrow" style="color:var(--gold-light)">Book Today</span>
+          <h3>New Patient Consultation</h3>
+          <div class="price">Ask Us</div>
+          <p class="note">Message us on WhatsApp for current new-patient offers.</p>
+        </div>
+      </div>
+      <div class="carousel-arrows">
+        <button class="carousel-arrow" onclick="scrollCarousel('promoCarousel', -1)" aria-label="Previous offer">←</button>
+        <button class="carousel-arrow" onclick="scrollCarousel('promoCarousel', 1)" aria-label="Next offer">→</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DEPARTMENTS (clickable cards → modal) ===== -->
+<section id="departments" class="bg-photo-light">
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">What we treat</span>
       <h2>Departments & Services</h2>
-      <p>Consultant specialists across ten-plus departments, seeing patients at the same physical location — no referrals across the city.</p>
+      <p>Consultant specialists across ten-plus departments, seeing patients at the same physical location. Tap a department for doctor availability.</p>
     </div>
-    <div class="dept-grid">
-      <div class="dept-card"><span class="dept-icon">🦷</span><h3>Dental Care</h3><p>General dentistry, RCT, crowns, fillings, and paediatric dental care.</p></div>
-      <div class="dept-card"><span class="dept-icon">✨</span><h3>Aesthetics & Skin</h3><p>Hydrafacial, whitening drip, and glutathione infusion treatments.</p></div>
-      <div class="dept-card"><span class="dept-icon">👩‍⚕️</span><h3>Gynaecology</h3><p>Consultant gynaecologists and sonologists for women's health.</p></div>
-      <div class="dept-card"><span class="dept-icon">👂</span><h3>ENT</h3><p>Ear, nose & throat consultation and surgical care.</p></div>
-      <div class="dept-card"><span class="dept-icon">🧒</span><h3>Pediatrics</h3><p>Family physician and paediatric care for children.</p></div>
-      <div class="dept-card"><span class="dept-icon">🦴</span><h3>Orthopedics</h3><p>Orthopaedic surgery consultation and treatment.</p></div>
-      <div class="dept-card"><span class="dept-icon">🩻</span><h3>Ultrasound & X-Ray</h3><p>On-site digital X-ray and ultrasound imaging.</p></div>
-      <div class="dept-card"><span class="dept-icon">🔬</span><h3>Laboratory & Diagnostics</h3><p>Full sample collection and diagnostic processing.</p></div>
-      <div class="dept-card"><span class="dept-icon">🏃</span><h3>Physiotherapy</h3><p>Manual and sports therapy with rehab specialists.</p></div>
-      <div class="dept-card"><span class="dept-icon">👁️</span><h3>Eye Care</h3><p>Eye specialists and surgeons for vision and eye health.</p></div>
-    </div>
+    <div class="dept-grid" id="deptGrid"><!-- populated by JS from DEPARTMENTS data --></div>
   </div>
 </section>
 
@@ -143,7 +164,7 @@
         <li>Custom fitting by certified technicians</li>
         <li>Care for patients of all ages</li>
       </ul>
-      <a href="https://wa.me/923356733777" class="btn btn-navy" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+      <a href="https://wa.me/923356733777?text=Hi%2C%20I%27d%20like%20to%20ask%20about%20Prosthetics%20%26%20Orthotics" class="btn btn-navy" target="_blank" rel="noopener">Enquire on WhatsApp</a>
     </div>
     <div class="feature-visual">
       <span>Custom-fitted mobility solutions, built for every stage of life.</span>
@@ -152,7 +173,7 @@
 </section>
 
 <!-- ===== DOCTORS ===== -->
-<section id="doctors" class="bg-navy">
+<section id="doctors" class="bg-navy bg-photo">
   <div class="container">
     <div class="section-head">
       <span class="eyebrow" style="color:var(--gold-light)">Our consultants</span>
@@ -273,31 +294,6 @@
   </div>
 </section>
 
-<!-- ===== PROMOTIONS ===== -->
-<section style="background:var(--off-white);">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Limited-time</span>
-      <h2>Current Promotions</h2>
-      <p>Offers below are seasonal — confirm current pricing via WhatsApp before booking.</p>
-    </div>
-    <div class="promo-grid">
-      <div class="promo-card">
-        <span class="eyebrow" style="color:var(--gold-light)">Combo Offer</span>
-        <h3>Dental Scaling + Hydrafacial</h3>
-        <div class="price">Rs. 8,000</div>
-        <p class="note">Combined dental scaling and Hydrafacial session.</p>
-      </div>
-      <div class="promo-card">
-        <span class="eyebrow" style="color:var(--gold-light)">Aesthetic</span>
-        <h3>Whitening Drip</h3>
-        <div class="price">Rs. 6,000</div>
-        <p class="note">Per session, glutathione whitening infusion.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ===== TRUST / PATIENT INFO ===== -->
 <section class="bg-navy">
   <div class="container">
@@ -382,6 +378,11 @@
 </footer>
 
 <a href="https://wa.me/923356733777" class="wa-float" target="_blank" rel="noopener" aria-label="Book on WhatsApp">💬</a>
+
+<!-- Department Modal -->
+<div class="dept-modal-overlay" id="deptModalOverlay" onclick="if(event.target===this) closeDept()">
+  <div class="dept-modal" id="deptModalContent"></div>
+</div>
 
 <script src="js/main.js"></script>
 </body>

@@ -437,6 +437,156 @@ section { padding: 90px 0; }
   margin: 12px 0;
 }
 .promo-card p.note { font-size: 0.8rem; color: rgba(255,255,255,0.6); margin-top: 14px; }
+.promo-card h3 { color: var(--white); }
+
+/* ---------- Background photo sections (low-opacity real photography) ---------- */
+/* Drop matching filenames into /images to activate — gradient shows as graceful fallback if missing */
+.bg-photo {
+  position: relative;
+  background-color: var(--navy-deep);
+  background-size: cover;
+  background-position: center;
+  isolation: isolate;
+}
+.bg-photo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(180deg, rgba(18,7,76,0.88), rgba(18,7,76,0.82));
+}
+.bg-photo > .container { position: relative; z-index: 1; }
+
+.bg-photo-light {
+  position: relative;
+  background-color: var(--off-white);
+  background-size: cover;
+  background-position: center;
+  isolation: isolate;
+}
+.bg-photo-light::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(180deg, rgba(250,249,245,0.94), rgba(250,249,245,0.9));
+}
+.bg-photo-light > .container { position: relative; z-index: 1; }
+
+/* ---------- Hero background carousel ---------- */
+.hero-bg-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.8s ease;
+  z-index: 0;
+}
+.hero-bg-slide.active { opacity: 0.28; }
+.hero > .hero-grid { position: relative; z-index: 1; }
+
+/* ---------- Department card interactivity ---------- */
+.dept-card { cursor: pointer; text-align: left; width: 100%; font: inherit; color: inherit; }
+.dept-card .learn { margin-top: 12px; font-size: 0.8rem; font-weight: 700; color: var(--navy); display: inline-block; }
+
+/* ---------- Department Modal ---------- */
+.dept-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(18,7,76,0.6);
+  backdrop-filter: blur(4px);
+  z-index: 200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.dept-modal-overlay.open { display: flex; }
+.dept-modal {
+  background: var(--white);
+  border-radius: 20px;
+  max-width: 520px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 36px;
+  position: relative;
+  animation: modalIn 0.25s ease;
+}
+@keyframes modalIn {
+  from { opacity: 0; transform: translateY(14px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.dept-modal-close {
+  position: absolute;
+  top: 20px; right: 20px;
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  border: none;
+  background: var(--off-white);
+  color: var(--navy);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dept-modal .icon { font-size: 2rem; margin-bottom: 10px; display: block; }
+.dept-modal h3 { font-size: 1.5rem; margin-bottom: 10px; }
+.dept-modal p.desc { color: var(--grey); margin-bottom: 24px; }
+.dept-modal .doctor-list-title {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.dept-modal .doc-row {
+  border-left: 3px solid var(--navy);
+  background: var(--off-white);
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+}
+.dept-modal .doc-row h4 { font-size: 1rem; color: var(--navy); margin-bottom: 4px; }
+.dept-modal .doc-row .qual { font-size: 0.82rem; color: var(--grey); margin-bottom: 6px; }
+.dept-modal .doc-row .avail { font-size: 0.8rem; color: var(--red); font-weight: 600; }
+.dept-modal .btn { width: 100%; justify-content: center; margin-top: 10px; }
+
+/* ---------- Promotions carousel ---------- */
+.promo-carousel-wrap { position: relative; }
+.promo-carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+  scrollbar-width: none;
+}
+.promo-carousel::-webkit-scrollbar { display: none; }
+.promo-carousel .promo-card {
+  scroll-snap-align: start;
+  min-width: 280px;
+  flex: 1 0 300px;
+}
+.carousel-arrows { display: flex; gap: 10px; justify-content: center; margin-top: 22px; }
+.carousel-arrow {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.08);
+  color: var(--white);
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+.carousel-arrow:hover { background: rgba(255,255,255,0.16); }
+
+/* Section-specific background photo slots — drop matching files into /images to activate */
+#departments.bg-photo-light { background-image: url('../images/departments-bg.jpg'); }
+#doctors.bg-photo { background-image: url('../images/doctors-bg.jpg'); }
+#promotions.bg-navy { background-color: var(--navy); }
 
 /* ---------- Trust / Patient Info ---------- */
 .trust-grid {
