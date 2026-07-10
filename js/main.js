@@ -149,14 +149,3 @@ function scrollCarousel(id, dir) {
   const el = document.getElementById(id);
   el.scrollBy({ left: dir * 320, behavior: 'smooth' });
 }
-
-// ---------- Hero background photo slideshow ----------
-const heroSlides = document.querySelectorAll('.hero-bg-slide');
-if (heroSlides.length > 1) {
-  let current = 0;
-  setInterval(() => {
-    heroSlides[current].classList.remove('active');
-    current = (current + 1) % heroSlides.length;
-    heroSlides[current].classList.add('active');
-  }, 6000);
-}

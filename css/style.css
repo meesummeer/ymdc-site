@@ -584,8 +584,8 @@ section { padding: 90px 0; }
 .carousel-arrow:hover { background: rgba(255,255,255,0.16); }
 
 /* Section-specific background photo slots — drop matching files into /images to activate */
-#departments.bg-photo-light { background-image: url('../images/departments-bg.jpg'); }
-#doctors.bg-photo { background-image: url('../images/doctors-bg.jpg'); }
+#departments.bg-photo-light { background-image: url('../images/image2.png'); }
+#doctors.bg-photo { background-image: url('../images/image3.png'); }
 #promotions.bg-navy { background-color: var(--navy); }
 
 /* ---------- Trust / Patient Info ---------- */
