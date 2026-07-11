@@ -39,20 +39,13 @@
 
     const frag = document.createDocumentFragment();
     filtered.forEach((item) => {
-      const tr = document.createElement('tr');
-      tr.className = 'pharmacy-row';
-      tr.dataset.name = item.name;
-
-      const nameTd = document.createElement('td');
-      nameTd.className = 'pharmacy-name';
-      nameTd.textContent = item.name;
-
-      const catTd = document.createElement('td');
-      catTd.className = 'pharmacy-category';
-      catTd.textContent = item.category;
-
-      tr.append(nameTd, catTd);
-      frag.appendChild(tr);
+      const card = document.createElement('button');
+      card.type = 'button';
+      card.className = 'pharmacy-card';
+      card.dataset.name = item.name;
+      card.textContent = item.name;
+      card.setAttribute('aria-label', `Order ${item.name} via WhatsApp`);
+      frag.appendChild(card);
     });
     listEl.appendChild(frag);
   }
@@ -77,9 +70,9 @@
   });
 
   listEl.addEventListener('click', (e) => {
-    const row = e.target.closest('.pharmacy-row');
-    if (!row) return;
-    window.open(waOrderUrl(row.dataset.name), '_blank', 'noopener');
+    const card = e.target.closest('.pharmacy-card');
+    if (!card) return;
+    window.open(waOrderUrl(card.dataset.name), '_blank', 'noopener');
   });
 
   fetch('data/pharmacy-inventory.json')
