@@ -624,12 +624,13 @@ section { padding: 100px 0; }
 .pharmacy-row { cursor: pointer; transition: background 0.12s ease; }
 .pharmacy-row:hover { background: rgba(26, 10, 110, 0.07) !important; }
 .pharmacy-name { color: var(--ink); }
-.pharmacy-price {
+.pharmacy-category {
   text-align: right;
   white-space: nowrap;
+  font-size: 0.82rem;
   font-weight: 600;
-  color: var(--navy);
-  width: 110px;
+  color: var(--grey);
+  width: 140px;
 }
 .pharmacy-empty {
   padding: 28px 16px;
@@ -656,11 +657,80 @@ section { padding: 100px 0; }
   white-space: nowrap;
   border: 0;
 }
+
+/* Lab page extras */
+.lab-search-label { max-width: none; flex: 1; }
+.lab-category-heading {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--navy);
+  padding: 14px 16px 8px;
+  background: rgba(26, 10, 110, 0.04);
+  border-bottom: var(--border);
+  margin: 0;
+}
+.lab-category-heading:not(:first-child) {
+  border-top: var(--border);
+}
+.lab-table { border: none; }
+.lab-table tbody tr:nth-child(even) { background: rgba(26, 10, 110, 0.03); }
+.lab-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 40px;
+}
+.lab-feature {
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--white);
+  padding: 28px 24px;
+}
+.lab-feature h2 {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.lab-feature p {
+  color: var(--grey);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+
+/* Lightweight homepage strip */
+.site-banner {
+  background: var(--white);
+  border-bottom: 1px solid rgba(26, 10, 110, 0.1);
+}
+.site-banner-inner {
+  padding: 14px 24px;
+}
+.site-banner p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--ink);
+  text-align: center;
+}
+.site-banner a {
+  color: var(--navy);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.site-banner a:hover { color: var(--navy-deep); }
+
 @media (max-width: 600px) {
   .pharmacy-controls { flex-direction: column; align-items: stretch; }
   .pharmacy-search-label { max-width: none; }
   .pharmacy-order-cta { left: 24px; right: 24px; transform: none; width: auto; justify-content: center; }
   .pharmacy-page { padding-bottom: 140px; }
+  .lab-features { grid-template-columns: 1fr; }
+  .pharmacy-category { width: auto; }
 }
 
 /* ---------- Promotions ---------- */

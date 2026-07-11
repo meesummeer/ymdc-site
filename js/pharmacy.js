@@ -12,12 +12,6 @@
   let activeCategory = 'Medicine';
   let query = '';
 
-  function formatPrice(price) {
-    const n = Number(price);
-    if (Number.isNaN(n)) return '—';
-    return `Rs. ${n % 1 === 0 ? n : n.toFixed(2)}`;
-  }
-
   function waOrderUrl(itemName) {
     const text = encodeURIComponent(`Hi, I'd like to order ${itemName} from the pharmacy`);
     return `https://wa.me/${WA_NUMBER}?text=${text}`;
@@ -53,11 +47,11 @@
       nameTd.className = 'pharmacy-name';
       nameTd.textContent = item.name;
 
-      const priceTd = document.createElement('td');
-      priceTd.className = 'pharmacy-price';
-      priceTd.textContent = formatPrice(item.price);
+      const catTd = document.createElement('td');
+      catTd.className = 'pharmacy-category';
+      catTd.textContent = item.category;
 
-      tr.append(nameTd, priceTd);
+      tr.append(nameTd, catTd);
       frag.appendChild(tr);
     });
     listEl.appendChild(frag);
