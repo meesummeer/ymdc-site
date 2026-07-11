@@ -122,19 +122,21 @@ const DEPARTMENTS = {
 
 // ---------- Render department cards ----------
 const deptGrid = document.getElementById('deptGrid');
-Object.entries(DEPARTMENTS).forEach(([key, d]) => {
-  const card = document.createElement('button');
-  card.className = 'dept-card';
-  card.setAttribute('onclick', `openDept('${key}')`);
-  card.innerHTML = `
-    <!-- TODO: line-icon SVG for ${d.name} goes in .dept-icon -->
-    <span class="dept-icon" aria-hidden="true"></span>
-    <h3>${d.name}</h3>
-    <p>${d.desc}</p>
-    <span class="learn">${d.tests && d.tests.length ? 'Tests available →' : 'Doctors & availability →'}</span>
-  `;
-  deptGrid.appendChild(card);
-});
+if (deptGrid) {
+  Object.entries(DEPARTMENTS).forEach(([key, d]) => {
+    const card = document.createElement('button');
+    card.className = 'dept-card';
+    card.setAttribute('onclick', `openDept('${key}')`);
+    card.innerHTML = `
+      <!-- TODO: line-icon SVG for ${d.name} goes in .dept-icon -->
+      <span class="dept-icon" aria-hidden="true"></span>
+      <h3>${d.name}</h3>
+      <p>${d.desc}</p>
+      <span class="learn">${d.tests && d.tests.length ? 'Tests available →' : 'Doctors & availability →'}</span>
+    `;
+    deptGrid.appendChild(card);
+  });
+}
 
 // ---------- Department modal ----------
 function openDept(key) {

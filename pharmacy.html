@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pharmacy — YMDC | Yaseen Medical & General Store</title>
+<meta name="description" content="Browse medicines and snacks at Yaseen Medical & General Store inside YMDC — open daily 9:00am to 10:00pm. Order via WhatsApp for pickup.">
+<link rel="canonical" href="https://ymdc.pk/pharmacy.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pharmacy — YMDC Yaseen Medical & General Store">
+<meta property="og:description" content="Browse stock and order via WhatsApp for pickup at YMDC Karachi.">
+<meta property="og:url" content="https://ymdc.pk/pharmacy.html">
+<meta property="og:image" content="https://ymdc.pk/images/logo.png">
+<meta property="og:locale" content="en_PK">
+
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <img src="images/logo.png" alt="YMDC — Yaseen Medical & Diagnostic Centre logo">
+      YMDC
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#promotions">Offers</a></li>
+      <li><a href="index.html#departments">Departments</a></li>
+      <li><a href="index.html#doctors">Doctors</a></li>
+      <li><a href="index.html#prosthetics">Prosthetics</a></li>
+      <li><a href="pharmacy.html">Pharmacy</a></li>
+      <li><a href="blog/">Blog</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="https://wa.me/923356733777" class="btn btn-gold btn-sm" target="_blank" rel="noopener">Book on WhatsApp</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== PHARMACY CATALOGUE ===== -->
+<section class="pharmacy-page">
+  <div class="container pharmacy-page-wrap">
+    <div class="pharmacy-intro">
+      <span class="eyebrow">In-house store</span>
+      <h1>Pharmacy</h1>
+      <p>Yaseen Medical &amp; General Store — open daily, 9:00am to 10:00pm, right inside YMDC. Browse our stock below, then message us on WhatsApp to place an order for pickup.</p>
+    </div>
+
+    <div class="pharmacy-controls">
+      <div class="pharmacy-tabs" role="tablist" aria-label="Product category">
+        <button type="button" class="pharmacy-tab is-active" role="tab" aria-selected="true" data-category="Medicine">Medicines</button>
+        <button type="button" class="pharmacy-tab" role="tab" aria-selected="false" data-category="Snack">Snacks</button>
+      </div>
+      <label class="pharmacy-search-label" for="pharmacySearch">
+        <span class="visually-hidden">Search inventory</span>
+        <input type="search" id="pharmacySearch" placeholder="Search by name…" autocomplete="off">
+      </label>
+    </div>
+
+    <p class="pharmacy-count" id="pharmacyCount" aria-live="polite"></p>
+
+    <div class="pharmacy-table-wrap">
+      <table class="pharmacy-table">
+        <thead>
+          <tr>
+            <th scope="col">Item</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody id="pharmacyList"></tbody>
+      </table>
+      <p class="pharmacy-empty" id="pharmacyEmpty" hidden>No items match your search.</p>
+    </div>
+  </div>
+</section>
+
+<a href="https://wa.me/923356733777?text=Hi%2C%20I%27d%20like%20to%20place%20a%20pharmacy%20order" class="btn btn-navy pharmacy-order-cta" target="_blank" rel="noopener">Order via WhatsApp</a>
+
+<footer>
+  <div class="container">
+    &copy; <span id="year"></span> Yaseen Medical & Diagnostic Centre. All rights reserved. · <a href="blog/">Blog</a>
+  </div>
+</footer>
+
+<a href="https://wa.me/923356733777" class="wa-float" target="_blank" rel="noopener" aria-label="Book on WhatsApp">WA</a>
+
+<script src="js/main.js"></script>
+<script src="js/pharmacy.js"></script>
+</body>
+</html>

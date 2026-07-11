@@ -1,0 +1,1322 @@
+[
+  {
+    "name": "ALP 0.5",
+    "category": "Medicine",
+    "price": 15
+  },
+  {
+    "name": "AXOLOX 500 MG TAB",
+    "category": "Medicine",
+    "price": 43
+  },
+  {
+    "name": "Aldactone 100 Tab",
+    "category": "Medicine",
+    "price": 26.5
+  },
+  {
+    "name": "Amoxil 125 90ml",
+    "category": "Medicine",
+    "price": 130
+  },
+  {
+    "name": "Amoxil 250mg",
+    "category": "Medicine",
+    "price": 10.8
+  },
+  {
+    "name": "Amoxil 500mg",
+    "category": "Medicine",
+    "price": 19
+  },
+  {
+    "name": "Angised",
+    "category": "Medicine",
+    "price": 2
+  },
+  {
+    "name": "Arinac Fort",
+    "category": "Medicine",
+    "price": 15
+  },
+  {
+    "name": "Atem L",
+    "category": "Medicine",
+    "price": 154
+  },
+  {
+    "name": "Augmentin 375",
+    "category": "Medicine",
+    "price": 44.3
+  },
+  {
+    "name": "Augmentin 625",
+    "category": "Medicine",
+    "price": 47
+  },
+  {
+    "name": "Augmentin DS Syp",
+    "category": "Medicine",
+    "price": 596
+  },
+  {
+    "name": "Augmentin Syp",
+    "category": "Medicine",
+    "price": 380
+  },
+  {
+    "name": "Avil Inj",
+    "category": "Medicine",
+    "price": 45
+  },
+  {
+    "name": "Avil Syp",
+    "category": "Medicine",
+    "price": 121
+  },
+  {
+    "name": "Beflam",
+    "category": "Medicine",
+    "price": 9
+  },
+  {
+    "name": "Bendge 2",
+    "category": "Medicine",
+    "price": 0
+  },
+  {
+    "name": "Bendge 3",
+    "category": "Medicine",
+    "price": 0
+  },
+  {
+    "name": "Bendge 4",
+    "category": "Medicine",
+    "price": 0
+  },
+  {
+    "name": "Bendge 6",
+    "category": "Medicine",
+    "price": 0
+  },
+  {
+    "name": "Betnesol Tab",
+    "category": "Medicine",
+    "price": 4
+  },
+  {
+    "name": "Bristozole 2.5mg",
+    "category": "Medicine",
+    "price": 100
+  },
+  {
+    "name": "Brufen 200",
+    "category": "Medicine",
+    "price": 4.4
+  },
+  {
+    "name": "Brufen Syp",
+    "category": "Medicine",
+    "price": 129
+  },
+  {
+    "name": "C A C Plus",
+    "category": "Medicine",
+    "price": 357
+  },
+  {
+    "name": "Caflam",
+    "category": "Medicine",
+    "price": 20.4
+  },
+  {
+    "name": "Calpol 100 Syp",
+    "category": "Medicine",
+    "price": 110
+  },
+  {
+    "name": "Carveda 3.125",
+    "category": "Medicine",
+    "price": 16.5
+  },
+  {
+    "name": "Carveda 6.25",
+    "category": "Medicine",
+    "price": 17.1
+  },
+  {
+    "name": "Cebosh 200",
+    "category": "Medicine",
+    "price": 55.5
+  },
+  {
+    "name": "Cebosh DS Syp",
+    "category": "Medicine",
+    "price": 370
+  },
+  {
+    "name": "Cebosh Syp 30ml",
+    "category": "Medicine",
+    "price": 305
+  },
+  {
+    "name": "Ceespan Cap",
+    "category": "Medicine",
+    "price": 730
+  },
+  {
+    "name": "Cefspan DS Syp",
+    "category": "Medicine",
+    "price": 501
+  },
+  {
+    "name": "Cerosh Syp",
+    "category": "Medicine",
+    "price": 0
+  },
+  {
+    "name": "Chewcal",
+    "category": "Medicine",
+    "price": 278
+  },
+  {
+    "name": "Cipotic Ear Drop",
+    "category": "Medicine",
+    "price": 0
+  },
+  {
+    "name": "Ciproxin 500",
+    "category": "Medicine",
+    "price": 73
+  },
+  {
+    "name": "Citanew 10 Tab",
+    "category": "Medicine",
+    "price": 33.5
+  },
+  {
+    "name": "Clenil-A L",
+    "category": "Medicine",
+    "price": 111
+  },
+  {
+    "name": "Concor 2.5",
+    "category": "Medicine",
+    "price": 14
+  },
+  {
+    "name": "Concor 5",
+    "category": "Medicine",
+    "price": 25
+  },
+  {
+    "name": "Cremafin",
+    "category": "Medicine",
+    "price": 180
+  },
+  {
+    "name": "D Rich",
+    "category": "Medicine",
+    "price": 450
+  },
+  {
+    "name": "Danzen",
+    "category": "Medicine",
+    "price": 15
+  },
+  {
+    "name": "Danzen DS",
+    "category": "Medicine",
+    "price": 24
+  },
+  {
+    "name": "Daonil",
+    "category": "Medicine",
+    "price": 4.4
+  },
+  {
+    "name": "Decadron 1ml",
+    "category": "Medicine",
+    "price": 32
+  },
+  {
+    "name": "Diamicron",
+    "category": "Medicine",
+    "price": 15
+  },
+  {
+    "name": "Diamicron MR 30",
+    "category": "Medicine",
+    "price": 22
+  },
+  {
+    "name": "Diamicron MR 60",
+    "category": "Medicine",
+    "price": 31.5
+  },
+  {
+    "name": "Disprin 100",
+    "category": "Medicine",
+    "price": 3.1
+  },
+  {
+    "name": "Dolor DS Syp",
+    "category": "Medicine",
+    "price": 135
+  },
+  {
+    "name": "Dolor Syp",
+    "category": "Medicine",
+    "price": 105
+  },
+  {
+    "name": "Domel Tab",
+    "category": "Medicine",
+    "price": 10
+  },
+  {
+    "name": "Duphalac Syp(S)",
+    "category": "Medicine",
+    "price": 316
+  },
+  {
+    "name": "Dyclo 50 Tab",
+    "category": "Medicine",
+    "price": 10
+  },
+  {
+    "name": "Dyclo Inj 50",
+    "category": "Medicine",
+    "price": 30
+  },
+  {
+    "name": "Emacrit SCH",
+    "category": "Medicine",
+    "price": 41
+  },
+  {
+    "name": "Entamizole DS",
+    "category": "Medicine",
+    "price": 16
+  },
+  {
+    "name": "Entamizole Syp",
+    "category": "Medicine",
+    "price": 150
+  },
+  {
+    "name": "Entamizole Tab",
+    "category": "Medicine",
+    "price": 10
+  },
+  {
+    "name": "Enterogermina L",
+    "category": "Medicine",
+    "price": 98
+  },
+  {
+    "name": "Enziclor",
+    "category": "Medicine",
+    "price": 369
+  },
+  {
+    "name": "Esso 20",
+    "category": "Medicine",
+    "price": 27
+  },
+  {
+    "name": "Esso 40 Cap",
+    "category": "Medicine",
+    "price": 46
+  },
+  {
+    "name": "Eziday 25",
+    "category": "Medicine",
+    "price": 14
+  },
+  {
+    "name": "Eziday 50",
+    "category": "Medicine",
+    "price": 24
+  },
+  {
+    "name": "Ezium 20",
+    "category": "Medicine",
+    "price": 25
+  },
+  {
+    "name": "Ezium 40",
+    "category": "Medicine",
+    "price": 44
+  },
+  {
+    "name": "Febrol DS Syp",
+    "category": "Medicine",
+    "price": 88
+  },
+  {
+    "name": "Febrol Syrup",
+    "category": "Medicine",
+    "price": 63
+  },
+  {
+    "name": "Fexet 120",
+    "category": "Medicine",
+    "price": 32
+  },
+  {
+    "name": "Fexet 60",
+    "category": "Medicine",
+    "price": 20
+  },
+  {
+    "name": "Fexet D",
+    "category": "Medicine",
+    "price": 30
+  },
+  {
+    "name": "Fibrocol Sch",
+    "category": "Medicine",
+    "price": 60
+  },
+  {
+    "name": "Flagyl Syp",
+    "category": "Medicine",
+    "price": 155
+  },
+  {
+    "name": "Fusiderm 15gr",
+    "category": "Medicine",
+    "price": 370
+  },
+  {
+    "name": "Fusiderm H Cr",
+    "category": "Medicine",
+    "price": 418
+  },
+  {
+    "name": "Gesunden Multi Tab",
+    "category": "Medicine",
+    "price": 2006
+  },
+  {
+    "name": "Getryl 1mg",
+    "category": "Medicine",
+    "price": 12
+  },
+  {
+    "name": "Getryl 2mg",
+    "category": "Medicine",
+    "price": 22
+  },
+  {
+    "name": "Getryl 3mg",
+    "category": "Medicine",
+    "price": 24
+  },
+  {
+    "name": "Getryl 4mg",
+    "category": "Medicine",
+    "price": 38
+  },
+  {
+    "name": "Glucophage 500",
+    "category": "Medicine",
+    "price": 4.2
+  },
+  {
+    "name": "Glycerine Suppos Adult",
+    "category": "Medicine",
+    "price": 0
+  },
+  {
+    "name": "HYDROZOLE CREAM",
+    "category": "Medicine",
+    "price": 299
+  },
+  {
+    "name": "Hydryllin S",
+    "category": "Medicine",
+    "price": 175
+  },
+  {
+    "name": "Imodium",
+    "category": "Medicine",
+    "price": 6.3
+  },
+  {
+    "name": "Indrop D Cap",
+    "category": "Medicine",
+    "price": 450
+  },
+  {
+    "name": "Indrop D Inj",
+    "category": "Medicine",
+    "price": 313
+  },
+  {
+    "name": "Ispaghol Sch",
+    "category": "Medicine",
+    "price": 35
+  },
+  {
+    "name": "Johar Joshanda",
+    "category": "Medicine",
+    "price": 25
+  },
+  {
+    "name": "Kempro",
+    "category": "Medicine",
+    "price": 6
+  },
+  {
+    "name": "Kestine 10",
+    "category": "Medicine",
+    "price": 21
+  },
+  {
+    "name": "LATROMINA 2.5 MG",
+    "category": "Medicine",
+    "price": 230
+  },
+  {
+    "name": "Laxoberon Tab",
+    "category": "Medicine",
+    "price": 8
+  },
+  {
+    "name": "Lorin NSA Tab L",
+    "category": "Medicine",
+    "price": 17
+  },
+  {
+    "name": "Methycobal Tab",
+    "category": "Medicine",
+    "price": 32
+  },
+  {
+    "name": "Moxigon DR",
+    "category": "Medicine",
+    "price": 380
+  },
+  {
+    "name": "Mucaine Syp",
+    "category": "Medicine",
+    "price": 196
+  },
+  {
+    "name": "NUBEROL FORTE",
+    "category": "Medicine",
+    "price": 13
+  },
+  {
+    "name": "No Spa Forte 30",
+    "category": "Medicine",
+    "price": 22
+  },
+  {
+    "name": "No-Spa Inj",
+    "category": "Medicine",
+    "price": 100
+  },
+  {
+    "name": "No-Spa Tab New",
+    "category": "Medicine",
+    "price": 10
+  },
+  {
+    "name": "Norsaline P DR",
+    "category": "Medicine",
+    "price": 135
+  },
+  {
+    "name": "Novidet 125 Syp",
+    "category": "Medicine",
+    "price": 212
+  },
+  {
+    "name": "Novidet 250 Syp",
+    "category": "Medicine",
+    "price": 315
+  },
+  {
+    "name": "Novipraz 10",
+    "category": "Medicine",
+    "price": 21
+  },
+  {
+    "name": "Novipraz 20",
+    "category": "Medicine",
+    "price": 35
+  },
+  {
+    "name": "Olanzia 10mg Tab",
+    "category": "Medicine",
+    "price": 27
+  },
+  {
+    "name": "Olanzia 5mg",
+    "category": "Medicine",
+    "price": 15.4
+  },
+  {
+    "name": "Onset B Tab",
+    "category": "Medicine",
+    "price": 50
+  },
+  {
+    "name": "Onset Inj",
+    "category": "Medicine",
+    "price": 243
+  },
+  {
+    "name": "Osmolor ORS",
+    "category": "Medicine",
+    "price": 20
+  },
+  {
+    "name": "Panadol Syp",
+    "category": "Medicine",
+    "price": 148
+  },
+  {
+    "name": "Panadol Tab",
+    "category": "Medicine",
+    "price": 4
+  },
+  {
+    "name": "Peditral ORS Orange",
+    "category": "Medicine",
+    "price": 30
+  },
+  {
+    "name": "Polyfax Eye",
+    "category": "Medicine",
+    "price": 113
+  },
+  {
+    "name": "Polyfax Skin",
+    "category": "Medicine",
+    "price": 224
+  },
+  {
+    "name": "Ponstan Fort",
+    "category": "Medicine",
+    "price": 6
+  },
+  {
+    "name": "Ponstan Tab",
+    "category": "Medicine",
+    "price": 4
+  },
+  {
+    "name": "Porkadex Eye Drop",
+    "category": "Medicine",
+    "price": 0
+  },
+  {
+    "name": "Protect GM Paste M",
+    "category": "Medicine",
+    "price": 235
+  },
+  {
+    "name": "Protect Mouth Wash",
+    "category": "Medicine",
+    "price": 220
+  },
+  {
+    "name": "Quench Cream",
+    "category": "Medicine",
+    "price": 300
+  },
+  {
+    "name": "RULING 40 MG CAP",
+    "category": "Medicine",
+    "price": 34
+  },
+  {
+    "name": "Rapicort 5",
+    "category": "Medicine",
+    "price": 4
+  },
+  {
+    "name": "Reltos",
+    "category": "Medicine",
+    "price": 136
+  },
+  {
+    "name": "Resvitol Platinum 15s",
+    "category": "Medicine",
+    "price": 1770
+  },
+  {
+    "name": "Rigix 30 Tab",
+    "category": "Medicine",
+    "price": 13
+  },
+  {
+    "name": "Rigix Syp",
+    "category": "Medicine",
+    "price": 200
+  },
+  {
+    "name": "Risek 20 Cap",
+    "category": "Medicine",
+    "price": 29
+  },
+  {
+    "name": "Risek Inj",
+    "category": "Medicine",
+    "price": 583
+  },
+  {
+    "name": "Risek Insta 20mg",
+    "category": "Medicine",
+    "price": 25
+  },
+  {
+    "name": "Rotec 50",
+    "category": "Medicine",
+    "price": 29
+  },
+  {
+    "name": "SERC 16 MG",
+    "category": "Medicine",
+    "price": 31
+  },
+  {
+    "name": "SERC 8MG",
+    "category": "Medicine",
+    "price": 19
+  },
+  {
+    "name": "Saniplast",
+    "category": "Medicine",
+    "price": 3.5
+  },
+  {
+    "name": "Sodaglycrin Ear Drops",
+    "category": "Medicine",
+    "price": 60
+  },
+  {
+    "name": "Softin Tab",
+    "category": "Medicine",
+    "price": 10
+  },
+  {
+    "name": "Solifen 5",
+    "category": "Medicine",
+    "price": 82
+  },
+  {
+    "name": "Solifin 10",
+    "category": "Medicine",
+    "price": 127
+  },
+  {
+    "name": "Somogel",
+    "category": "Medicine",
+    "price": 195
+  },
+  {
+    "name": "Strepsil Mix",
+    "category": "Medicine",
+    "price": 22
+  },
+  {
+    "name": "Surbex Z",
+    "category": "Medicine",
+    "price": 510
+  },
+  {
+    "name": "Sustac 2.6",
+    "category": "Medicine",
+    "price": 299
+  },
+  {
+    "name": "Sustac 6.4mg",
+    "category": "Medicine",
+    "price": 353
+  },
+  {
+    "name": "Synflex",
+    "category": "Medicine",
+    "price": 30
+  },
+  {
+    "name": "Syp Acicon",
+    "category": "Medicine",
+    "price": 150
+  },
+  {
+    "name": "Syp Esegrow",
+    "category": "Medicine",
+    "price": 200
+  },
+  {
+    "name": "T-Day Syp",
+    "category": "Medicine",
+    "price": 150
+  },
+  {
+    "name": "Tab Acicon 20mg",
+    "category": "Medicine",
+    "price": 23
+  },
+  {
+    "name": "Tab Acicon 40mg",
+    "category": "Medicine",
+    "price": 28
+  },
+  {
+    "name": "Tab Equibar 16mg",
+    "category": "Medicine",
+    "price": 13
+  },
+  {
+    "name": "Tab Equibar 8mg",
+    "category": "Medicine",
+    "price": 11.7
+  },
+  {
+    "name": "Tab Esegrow",
+    "category": "Medicine",
+    "price": 320
+  },
+  {
+    "name": "Tab Inoquin 250mg",
+    "category": "Medicine",
+    "price": 0
+  },
+  {
+    "name": "Tab Inoquin 500mg",
+    "category": "Medicine",
+    "price": 41
+  },
+  {
+    "name": "Tamsolin 0.4",
+    "category": "Medicine",
+    "price": 78
+  },
+  {
+    "name": "Tenormin 25",
+    "category": "Medicine",
+    "price": 10
+  },
+  {
+    "name": "Tenormin 50",
+    "category": "Medicine",
+    "price": 18
+  },
+  {
+    "name": "Terbisil CR",
+    "category": "Medicine",
+    "price": 330
+  },
+  {
+    "name": "Tinostol D25 Sachet",
+    "category": "Medicine",
+    "price": 65
+  },
+  {
+    "name": "Tinostol D600 Sachet",
+    "category": "Medicine",
+    "price": 210
+  },
+  {
+    "name": "Trisil Tab",
+    "category": "Medicine",
+    "price": 6
+  },
+  {
+    "name": "Velosef 125",
+    "category": "Medicine",
+    "price": 410
+  },
+  {
+    "name": "Velosef 250 Cap",
+    "category": "Medicine",
+    "price": 30
+  },
+  {
+    "name": "Velosef 250 Syp",
+    "category": "Medicine",
+    "price": 613
+  },
+  {
+    "name": "Velosef 500 Cap",
+    "category": "Medicine",
+    "price": 60
+  },
+  {
+    "name": "Vidaylin Syp",
+    "category": "Medicine",
+    "price": 190
+  },
+  {
+    "name": "Voren 50 Tab",
+    "category": "Medicine",
+    "price": 12
+  },
+  {
+    "name": "Voren Inj",
+    "category": "Medicine",
+    "price": 57
+  },
+  {
+    "name": "Wel D Cap",
+    "category": "Medicine",
+    "price": 310
+  },
+  {
+    "name": "Xynosine",
+    "category": "Medicine",
+    "price": 72
+  },
+  {
+    "name": "ZENTEL TAB",
+    "category": "Medicine",
+    "price": 22
+  },
+  {
+    "name": "ZYRTEC TAB",
+    "category": "Medicine",
+    "price": 13
+  },
+  {
+    "name": "ZYRTEC TAB",
+    "category": "Medicine",
+    "price": 13
+  },
+  {
+    "name": "Zestril 10",
+    "category": "Medicine",
+    "price": 38.6
+  },
+  {
+    "name": "Zestril 5",
+    "category": "Medicine",
+    "price": 20
+  },
+  {
+    "name": "Zetro Syp",
+    "category": "Medicine",
+    "price": 305
+  },
+  {
+    "name": "Zopent 40mg",
+    "category": "Medicine",
+    "price": 41
+  },
+  {
+    "name": "augmentin 1gm tab",
+    "category": "Medicine",
+    "price": 61
+  },
+  {
+    "name": "azomax 500mg tab",
+    "category": "Medicine",
+    "price": 91.3
+  },
+  {
+    "name": "betnesol-n drops",
+    "category": "Medicine",
+    "price": 117
+  },
+  {
+    "name": "betnovate n",
+    "category": "Medicine",
+    "price": 181
+  },
+  {
+    "name": "bronchokast 10mg",
+    "category": "Medicine",
+    "price": 37
+  },
+  {
+    "name": "buscopan tab",
+    "category": "Medicine",
+    "price": 15
+  },
+  {
+    "name": "cac 1000 plus",
+    "category": "Medicine",
+    "price": 357
+  },
+  {
+    "name": "clobevate cream",
+    "category": "Medicine",
+    "price": 218
+  },
+  {
+    "name": "clobevate ointment",
+    "category": "Medicine",
+    "price": 211
+  },
+  {
+    "name": "coldrex syp",
+    "category": "Medicine",
+    "price": 140
+  },
+  {
+    "name": "conaz lotion",
+    "category": "Medicine",
+    "price": 348
+  },
+  {
+    "name": "daktarin oral gel",
+    "category": "Medicine",
+    "price": 244
+  },
+  {
+    "name": "dermovate nn ointment",
+    "category": "Medicine",
+    "price": 234
+  },
+  {
+    "name": "erythrocin 250mg tab",
+    "category": "Medicine",
+    "price": 22
+  },
+  {
+    "name": "flagyl tab",
+    "category": "Medicine",
+    "price": 4.8
+  },
+  {
+    "name": "folic acid",
+    "category": "Medicine",
+    "price": 96
+  },
+  {
+    "name": "ganaton od",
+    "category": "Medicine",
+    "price": 64
+  },
+  {
+    "name": "ganaton tab",
+    "category": "Medicine",
+    "price": 38.3
+  },
+  {
+    "name": "gaviscon syp",
+    "category": "Medicine",
+    "price": 280
+  },
+  {
+    "name": "hydrocortisone cream",
+    "category": "Medicine",
+    "price": 60
+  },
+  {
+    "name": "icon tab",
+    "category": "Medicine",
+    "price": 98.5
+  },
+  {
+    "name": "jardin",
+    "category": "Medicine",
+    "price": 13
+  },
+  {
+    "name": "jardin d",
+    "category": "Medicine",
+    "price": 26
+  },
+  {
+    "name": "klaricid 250 mg tab",
+    "category": "Medicine",
+    "price": 55
+  },
+  {
+    "name": "klaricid 500mg",
+    "category": "Medicine",
+    "price": 99
+  },
+  {
+    "name": "leflox 250mg",
+    "category": "Medicine",
+    "price": 34
+  },
+  {
+    "name": "leflox 500mg",
+    "category": "Medicine",
+    "price": 55
+  },
+  {
+    "name": "lidosporin drops",
+    "category": "Medicine",
+    "price": 99
+  },
+  {
+    "name": "lysovit syp",
+    "category": "Medicine",
+    "price": 249
+  },
+  {
+    "name": "majecal d tab",
+    "category": "Medicine",
+    "price": 21
+  },
+  {
+    "name": "methachlor eye ointment",
+    "category": "Medicine",
+    "price": 102
+  },
+  {
+    "name": "methycobal 500",
+    "category": "Medicine",
+    "price": 32
+  },
+  {
+    "name": "methycobal inj",
+    "category": "Medicine",
+    "price": 192
+  },
+  {
+    "name": "mycitracin ointment",
+    "category": "Medicine",
+    "price": 267
+  },
+  {
+    "name": "myteka 10 mg tyab",
+    "category": "Medicine",
+    "price": 40
+  },
+  {
+    "name": "neo-mercazole tab",
+    "category": "Medicine",
+    "price": 280
+  },
+  {
+    "name": "nilstat drops",
+    "category": "Medicine",
+    "price": 170
+  },
+  {
+    "name": "norvasc 10 mg",
+    "category": "Medicine",
+    "price": 32.7
+  },
+  {
+    "name": "norvasc 5mg",
+    "category": "Medicine",
+    "price": 16.7
+  },
+  {
+    "name": "opth-lubric drops",
+    "category": "Medicine",
+    "price": 175
+  },
+  {
+    "name": "osnate d syp",
+    "category": "Medicine",
+    "price": 600
+  },
+  {
+    "name": "osnate d tab",
+    "category": "Medicine",
+    "price": 600
+  },
+  {
+    "name": "revitale multi",
+    "category": "Medicine",
+    "price": 819
+  },
+  {
+    "name": "sangobion syp",
+    "category": "Medicine",
+    "price": 173
+  },
+  {
+    "name": "sert 100mg",
+    "category": "Medicine",
+    "price": 65
+  },
+  {
+    "name": "sert 50mg",
+    "category": "Medicine",
+    "price": 45
+  },
+  {
+    "name": "sofvasc 10 mg",
+    "category": "Medicine",
+    "price": 23.2
+  },
+  {
+    "name": "sofvasc 5 mg",
+    "category": "Medicine",
+    "price": 12
+  },
+  {
+    "name": "sunny d soft gel",
+    "category": "Medicine",
+    "price": 550
+  },
+  {
+    "name": "thron 250mg",
+    "category": "Medicine",
+    "price": 46
+  },
+  {
+    "name": "tobcydex drops",
+    "category": "Medicine",
+    "price": 400
+  },
+  {
+    "name": "treviamet",
+    "category": "Medicine",
+    "price": 41
+  },
+  {
+    "name": "treviamet",
+    "category": "Medicine",
+    "price": 0
+  },
+  {
+    "name": "urocit-k",
+    "category": "Medicine",
+    "price": 1500
+  },
+  {
+    "name": "val-lube drops",
+    "category": "Medicine",
+    "price": 750
+  },
+  {
+    "name": "vermox syp",
+    "category": "Medicine",
+    "price": 170
+  },
+  {
+    "name": "voltral emulgel",
+    "category": "Medicine",
+    "price": 200
+  },
+  {
+    "name": "zatofen tab",
+    "category": "Medicine",
+    "price": 12.2
+  },
+  {
+    "name": "zeecip eye drops",
+    "category": "Medicine",
+    "price": 300
+  },
+  {
+    "name": "zentel syp",
+    "category": "Medicine",
+    "price": 113
+  },
+  {
+    "name": "zetro 250 mg",
+    "category": "Medicine",
+    "price": 51
+  },
+  {
+    "name": "Chocolatto Biscuit",
+    "category": "Snack",
+    "price": 10
+  },
+  {
+    "name": "Cup Cake",
+    "category": "Snack",
+    "price": 20
+  },
+  {
+    "name": "Dairy Milk Chocolate",
+    "category": "Snack",
+    "price": 30
+  },
+  {
+    "name": "Gluco Biscuit",
+    "category": "Snack",
+    "price": 20
+  },
+  {
+    "name": "KURKURE",
+    "category": "Snack",
+    "price": 20
+  },
+  {
+    "name": "LAYS 30",
+    "category": "Snack",
+    "price": 30
+  },
+  {
+    "name": "LAYS 50",
+    "category": "Snack",
+    "price": 50
+  },
+  {
+    "name": "LAYS WAVY",
+    "category": "Snack",
+    "price": 30
+  },
+  {
+    "name": "Lemon Sandwich Biscuit",
+    "category": "Snack",
+    "price": 20
+  },
+  {
+    "name": "Lollipop",
+    "category": "Snack",
+    "price": 10
+  },
+  {
+    "name": "Marie Biscuit",
+    "category": "Snack",
+    "price": 20
+  },
+  {
+    "name": "MilcoLu Biscuit",
+    "category": "Snack",
+    "price": 20
+  },
+  {
+    "name": "Now Chocolate",
+    "category": "Snack",
+    "price": 10
+  },
+  {
+    "name": "Paradise Chocolate",
+    "category": "Snack",
+    "price": 10
+  },
+  {
+    "name": "Party Pik Biscuit",
+    "category": "Snack",
+    "price": 20
+  },
+  {
+    "name": "Peanut Pik Biscuit",
+    "category": "Snack",
+    "price": 20
+  },
+  {
+    "name": "Rio Biscuit",
+    "category": "Snack",
+    "price": 20
+  },
+  {
+    "name": "Seasons Biscuit",
+    "category": "Snack",
+    "price": 10
+  },
+  {
+    "name": "Sooper Biscuit",
+    "category": "Snack",
+    "price": 20
+  },
+  {
+    "name": "Zeera Plus Biscuit",
+    "category": "Snack",
+    "price": 20
+  },
+  {
+    "name": "lays",
+    "category": "Snack",
+    "price": 20
+  }
+]
