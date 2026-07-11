@@ -52,6 +52,7 @@
       YMDC
     </a>
     <ul class="nav-links">
+      <li><a href="#about">About</a></li>
       <li><a href="#promotions">Offers</a></li>
       <li><a href="#departments">Departments</a></li>
       <li><a href="#doctors">Doctors</a></li>
@@ -84,18 +85,72 @@
         <div><strong>Daily</strong><span>Pharmacy Access</span></div>
       </div>
     </div>
-    <div class="hero-card">
-      <h3>Today at YMDC</h3>
-      <ul class="hero-list">
-        <li><span>Pharmacy & General Store</span><span>9:00am – 10:00pm</span></li>
-        <li><span>Dental & Aesthetics</span><span>1:00pm – 9:00pm</span></li>
-        <li><span>Diagnostics & Lab</span><span>9:30am – 9:00pm</span></li>
-        <li><span>General Consultation</span><span>10:00am – 9:30pm</span></li>
-      </ul>
-      <a href="#doctors" style="display:block;margin-top:20px;font-size:0.85rem;color:var(--gold-light);font-weight:700;">See full doctor schedule →</a>
+    <div class="hero-aside">
+      <div class="hero-card">
+        <h3>Today at YMDC</h3>
+        <ul class="hero-list">
+          <li><span>Pharmacy & General Store</span><span>9:00am – 10:00pm</span></li>
+          <li><span>Dental & Aesthetics</span><span>1:00pm – 9:00pm</span></li>
+          <li><span>Diagnostics & Lab</span><span>9:30am – 9:00pm</span></li>
+          <li><span>General Consultation</span><span>10:00am – 9:30pm</span></li>
+        </ul>
+        <a href="#doctors" style="display:block;margin-top:20px;font-size:0.85rem;color:var(--gold-light);font-weight:700;">See full doctor schedule →</a>
+      </div>
+      <div class="hero-card find-doctor">
+        <label class="find-doctor-label" for="doctorSelect">Find a Doctor</label>
+        <div class="find-doctor-row">
+          <select id="doctorSelect" aria-label="Select a doctor">
+            <option value="">--Please Select--</option>
+          </select>
+          <button type="button" class="btn btn-gold btn-sm" id="doctorSearchBtn">Search</button>
+        </div>
+      </div>
     </div>
   </div>
 </header>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="about-section">
+  <div class="container about-wrap">
+    <div class="about-intro">
+      <span class="eyebrow">Who we are</span>
+      <h2>About YMDC</h2>
+      <p class="about-mission">Yaseen Medical &amp; Diagnostic Centre is a multi-specialty clinic on Main Jinnah Road, Karachi, built around patient-first care that is practical to reach. We bring consultants, diagnostics, and pharmacy services together under one roof so families can get clear advice and follow-through without running across the city.</p>
+    </div>
+
+    <div class="about-block">
+      <h3>Our values</h3>
+      <ul class="about-values">
+        <li>
+          <strong>Accessibility</strong>
+          <span>Care that is easy to find, understand, and afford for the communities we serve.</span>
+        </li>
+        <li>
+          <strong>Transparency</strong>
+          <span>Straightforward communication about treatment options, schedules, and costs.</span>
+        </li>
+        <li>
+          <strong>Community care</strong>
+          <span>A commitment to neighbourhood health beyond paid appointments alone.</span>
+        </li>
+        <li>
+          <strong>Quality</strong>
+          <span>Consultant-led services and on-site diagnostics held to clear clinical standards.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="about-block about-leadership">
+      <h3>Leadership</h3>
+      <p>Led by Ms. Hina Hussain, CEO — a dedicated philanthropist committed to accessible healthcare and community welfare.</p>
+    </div>
+
+    <div class="about-block about-community">
+      <h3>Community initiatives</h3>
+      <p>YMDC regularly hosts free Sunday medical camps and offers free eye tests at the centre, as part of ongoing outreach for patients who need an affordable first step into care.</p>
+    </div>
+  </div>
+</section>
 
 <!-- ===== PROMOTIONS (moved up, carousel) ===== -->
 <section id="promotions" class="bg-navy">
@@ -189,17 +244,17 @@
     <div class="doctor-group">
       <h3>Dental & Aesthetics</h3>
       <div class="doctor-grid">
-        <div class="doctor-card">
+        <div class="doctor-card" data-doctor="Dr. Yusra Ali">
           <h4>Dr. Yusra Ali</h4>
           <p class="qual">BDS — Paediatric Dentist & Aesthetic Practitioner</p>
           <p class="avail">Mon–Sat, 1:00pm – 9:00pm</p>
         </div>
-        <div class="doctor-card">
+        <div class="doctor-card" data-doctor="Dr. Ali Moiz">
           <h4>Dr. Ali Moiz</h4>
           <p class="qual">BDS, Dental Surgeon</p>
           <p class="avail">Mon–Sat, 1:00pm – 9:00pm</p>
         </div>
-        <div class="doctor-card">
+        <div class="doctor-card" data-doctor="Dr. Salman Ali Ahmad">
           <h4>Dr. Salman Ali Ahmad</h4>
           <p class="qual">MBBS, PAADS Certified Aesthetic Consultant & General Physician</p>
           <p class="avail">Mon–Fri, 3:30pm – 6:00pm</p>
@@ -210,12 +265,12 @@
     <div class="doctor-group">
       <h3>Women's Health</h3>
       <div class="doctor-grid">
-        <div class="doctor-card">
+        <div class="doctor-card" data-doctor="Dr. Aneela Shaikh">
           <h4>Dr. Aneela Shaikh</h4>
           <p class="qual">MBBS, MCPS, Gynaecologist & Sonologist</p>
           <p class="avail">Mon–Sat, 3:00pm – 5:00pm</p>
         </div>
-        <div class="doctor-card">
+        <div class="doctor-card" data-doctor="Dr. Mahjabeen Suhail">
           <h4>Dr. Mahjabeen Suhail</h4>
           <p class="qual">MBBS, RMP, Gynaecologist & General Physician</p>
           <p class="avail">Mon–Sat, 9:30am – 12:30pm</p>
@@ -226,12 +281,12 @@
     <div class="doctor-group">
       <h3>General & Family Medicine / ENT</h3>
       <div class="doctor-grid">
-        <div class="doctor-card">
+        <div class="doctor-card" data-doctor="Dr. A.J. Panhwar">
           <h4>Dr. A.J. Panhwar</h4>
           <p class="qual">MBBS, Family Physician</p>
           <p class="avail">Mon–Sat, 10:00am – 1:00pm</p>
         </div>
-        <div class="doctor-card">
+        <div class="doctor-card" data-doctor="Dr. Anwer Majeed">
           <h4>Dr. Anwer Majeed</h4>
           <p class="qual">DLO, MCPS, ENT Surgeon</p>
           <p class="avail">Mon–Sat, 6:30pm – 9:30pm</p>
@@ -242,17 +297,17 @@
     <div class="doctor-group">
       <h3>Orthopedics & Physiotherapy</h3>
       <div class="doctor-grid">
-        <div class="doctor-card">
+        <div class="doctor-card" data-doctor="Dr. Sheikh Imran">
           <h4>Dr. Sheikh Imran</h4>
           <p class="qual">FCPS, Orthopaedic Surgeon</p>
           <p class="avail">Mon, Wed & Fri, 6:30pm – 7:30pm</p>
         </div>
-        <div class="doctor-card">
+        <div class="doctor-card" data-doctor="Dr. Rashid Ali Chandio">
           <h4>Dr. Rashid Ali Chandio</h4>
           <p class="qual">DPT, MSK, Manual & Sports Therapy (Physiotherapist)</p>
           <p class="avail">Mon–Sat, 5:00pm – 10:00pm</p>
         </div>
-        <div class="doctor-card">
+        <div class="doctor-card" data-doctor="Dr. Hafiza Sundas">
           <h4>Dr. Hafiza Sundas</h4>
           <p class="qual">DPT, Rehab & MT Specialist</p>
           <p class="avail">Mon–Sat, 5:00pm – 10:00pm</p>
@@ -263,17 +318,17 @@
     <div class="doctor-group">
       <h3>Diagnostics & Eye Care</h3>
       <div class="doctor-grid">
-        <div class="doctor-card">
+        <div class="doctor-card" data-doctor="Dr. Tara Chand">
           <h4>Dr. Tara Chand</h4>
           <p class="qual">MBBS, Sonologist</p>
           <p class="avail">Mon–Sat, 6:00pm – 9:00pm</p>
         </div>
-        <div class="doctor-card">
+        <div class="doctor-card" data-doctor="Farrukh">
           <h4>Farrukh</h4>
           <p class="qual">Optometrist</p>
           <p class="avail">Mon–Sat, 1:00pm – 3:00pm</p>
         </div>
-        <div class="doctor-card">
+        <div class="doctor-card" data-doctor="Dr. Maqbool Hussain">
           <h4>Dr. Maqbool Hussain</h4>
           <p class="qual">Eye Surgeon</p>
           <p class="avail">Tuesday, 6:00pm – 8:00pm</p>

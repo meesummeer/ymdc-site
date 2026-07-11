@@ -76,7 +76,29 @@ const DEPARTMENTS = {
     icon: '', // TODO: line-icon SVG
     name: 'Laboratory & Diagnostics',
     desc: 'Full sample collection and diagnostic processing on-site, with home collection available on request.',
-    doctors: []
+    doctors: [],
+    tests: [
+      'CBC',
+      'ESR',
+      'Lipid Profile',
+      'Liver Function Tests',
+      'Thyroid Profile',
+      'TSH',
+      'HbA1C',
+      'Blood Group RH',
+      'Urine Detail Report',
+      'Stool Detail Report',
+      'Dengue Antigen NS1 Rapid Test',
+      'Widal Test',
+      'RT-PCR (COVID-19)',
+      'Vitamin D',
+      'Vitamin B12',
+      'Serum Creatinine',
+      'Random Blood Sugar',
+      'Fasting Blood Sugar',
+      'Hepatitis B Profile',
+      'Pregnancy Test (Urine)'
+    ]
   },
   physio: {
     icon: '', // TODO: line-icon SVG
@@ -109,7 +131,7 @@ Object.entries(DEPARTMENTS).forEach(([key, d]) => {
     <span class="dept-icon" aria-hidden="true"></span>
     <h3>${d.name}</h3>
     <p>${d.desc}</p>
-    <span class="learn">Doctors & availability →</span>
+    <span class="learn">${d.tests && d.tests.length ? 'Tests available →' : 'Doctors & availability →'}</span>
   `;
   deptGrid.appendChild(card);
 });
@@ -121,14 +143,23 @@ function openDept(key) {
   const content = document.getElementById('deptModalContent');
 
   const waMsg = encodeURIComponent(`Hi, I'd like to book an appointment for ${d.name}`);
-  const doctorsHtml = d.doctors.length
-    ? `<div class="doctor-list-title">Available Doctors</div>` + d.doctors.map(doc => `
+
+  let bodyHtml = '';
+  if (d.tests && d.tests.length) {
+    bodyHtml += `<div class="doctor-list-title">Available Tests</div>
+      <ul class="test-list">${d.tests.map((t) => `<li>${t}</li>`).join('')}</ul>
+      <p class="desc test-note">On-site sample collection daily — confirm current pricing and turnaround via WhatsApp. Home collection available on request.</p>`;
+  }
+  if (d.doctors.length) {
+    bodyHtml += `<div class="doctor-list-title">Available Doctors</div>` + d.doctors.map(doc => `
         <div class="doc-row">
           <h4>${doc.name}</h4>
           <p class="qual">${doc.qual}</p>
           <p class="avail">${doc.avail}</p>
-        </div>`).join('')
-    : `<p class="desc" style="margin-top:-10px;">On-site technicians handle this department daily — no fixed consultant schedule. Message us to confirm timing.</p>`;
+        </div>`).join('');
+  } else if (!d.tests || !d.tests.length) {
+    bodyHtml += `<p class="desc" style="margin-top:-10px;">On-site technicians handle this department daily — no fixed consultant schedule. Message us to confirm timing.</p>`;
+  }
 
   content.innerHTML = `
     <button class="dept-modal-close" onclick="closeDept()" aria-label="Close">✕</button>
@@ -136,7 +167,7 @@ function openDept(key) {
     <span class="icon" aria-hidden="true"></span>
     <h3>${d.name}</h3>
     <p class="desc">${d.desc}</p>
-    ${doctorsHtml}
+    ${bodyHtml}
     <a href="https://wa.me/${WA_NUMBER}?text=${waMsg}" class="btn btn-navy" target="_blank" rel="noopener">Book on WhatsApp</a>
   `;
   overlay.classList.add('open');
@@ -147,6 +178,63 @@ function closeDept() {
   document.body.style.overflow = '';
 }
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDept(); });
+
+// ---------- Find a Doctor (unique names from DEPARTMENTS) ----------
+function getUniqueDoctors() {
+  const seen = new Set();
+  const list = [];
+  Object.values(DEPARTMENTS).forEach((dept) => {
+    dept.doctors.forEach((doc) => {
+      if (!seen.has(doc.name)) {
+        seen.add(doc.name);
+        list.push(doc);
+      }
+    });
+  });
+  return list.sort((a, b) => a.name.localeCompare(b.name));
+}
+
+function initDoctorSearch() {
+  const select = document.getElementById('doctorSelect');
+  const btn = document.getElementById('doctorSearchBtn');
+  if (!select || !btn) return;
+
+  getUniqueDoctors().forEach((doc) => {
+    const opt = document.createElement('option');
+    opt.value = doc.name;
+    opt.textContent = doc.name;
+    select.appendChild(opt);
+  });
+
+  btn.addEventListener('click', findDoctor);
+  select.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') findDoctor();
+  });
+}
+
+function findDoctor() {
+  const select = document.getElementById('doctorSelect');
+  const name = select.value;
+  if (!name) {
+    select.focus();
+    return;
+  }
+
+  const card = document.querySelector(`#doctors .doctor-card[data-doctor="${CSS.escape(name)}"]`);
+  if (!card) return;
+
+  document.querySelectorAll('#doctors .doctor-card.is-highlighted').forEach((el) => {
+    el.classList.remove('is-highlighted');
+  });
+
+  card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  // Restart animation if the same doctor is searched again
+  void card.offsetWidth;
+  card.classList.add('is-highlighted');
+  window.setTimeout(() => card.classList.remove('is-highlighted'), 2000);
+}
+
+initDoctorSearch();
 
 // ---------- Carousel arrows (promos + prosthetics) ----------
 function scrollCarousel(id, dir) {
