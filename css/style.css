@@ -1,6 +1,6 @@
 /* ============================================
    YMDC — Yaseen Medical & Diagnostic Centre
-   Brand: Navy / Gold / Red / White — premium, trustworthy, modest
+   Brand: Navy / Gold / Red / White — clean institutional, restrained
    ============================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap');
@@ -8,8 +8,8 @@
 :root {
   --navy: #1A0A6E;
   --navy-deep: #12074c;
-  --gold: #C9A227;
-  --gold-light: #e6c458;
+  --gold: #B8962E;
+  --gold-light: #d4b84a;
   --red: #B22222;
   --white: #FFFFFF;
   --off-white: #FAF9F5;
@@ -19,9 +19,9 @@
   --font-display: 'Fraunces', serif;
   --font-body: 'Manrope', sans-serif;
 
-  --radius: 14px;
-  --shadow-soft: 0 10px 30px rgba(26, 10, 110, 0.08);
-  --shadow-card: 0 4px 18px rgba(26, 10, 110, 0.06);
+  --radius: 8px;
+  --border: 1px solid rgba(26, 10, 110, 0.12);
+  --border-hover: 1px solid rgba(26, 10, 110, 0.35);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -64,33 +64,35 @@ h1, h2, h3 { font-family: var(--font-display); color: var(--navy); }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 14px 28px;
-  border-radius: 999px;
-  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: var(--radius);
+  font-weight: 600;
   font-size: 0.95rem;
-  border: none;
+  border: 1px solid transparent;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
-.btn:hover { transform: translateY(-2px); }
 
 .btn-gold {
-  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  background: var(--gold);
   color: var(--navy-deep);
-  box-shadow: 0 8px 20px rgba(201, 162, 39, 0.35);
+  border-color: var(--gold);
 }
+.btn-gold:hover { background: var(--gold-light); border-color: var(--gold-light); }
+
 .btn-outline {
   background: transparent;
   color: var(--white);
-  border: 1.5px solid rgba(255,255,255,0.6);
+  border: 1px solid rgba(255,255,255,0.55);
 }
-.btn-outline:hover { background: rgba(255,255,255,0.1); }
+.btn-outline:hover { border-color: rgba(255,255,255,0.9); background: transparent; }
 
 .btn-navy {
   background: var(--navy);
   color: var(--white);
-  box-shadow: 0 8px 20px rgba(26,10,110,0.25);
+  border-color: var(--navy);
 }
+.btn-navy:hover { background: var(--navy-deep); border-color: var(--navy-deep); }
 
 /* ---------- Nav ---------- */
 .nav {
@@ -146,10 +148,8 @@ h1, h2, h3 { font-family: var(--font-display); color: var(--navy); }
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
-  padding: 170px 0 100px;
-  background:
-    radial-gradient(1200px 600px at 85% -10%, rgba(201,162,39,0.18), transparent 60%),
-    linear-gradient(180deg, var(--navy-deep) 0%, var(--navy) 55%, #23117f 100%);
+  padding: 160px 0 100px;
+  background: linear-gradient(180deg, var(--navy-deep) 0%, var(--navy) 100%);
   color: var(--white);
   overflow: hidden;
 }
@@ -168,7 +168,12 @@ h1, h2, h3 { font-family: var(--font-display); color: var(--navy); }
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: 50px;
-  align-items: center;
+  align-items: start;
+}
+.hero-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 .hero h1 {
   font-size: clamp(2.4rem, 4.2vw, 3.6rem);
@@ -201,7 +206,7 @@ h1, h2, h3 { font-family: var(--font-display); color: var(--navy); }
   display: block;
   font-family: var(--font-display);
   font-size: 1.8rem;
-  color: var(--gold-light);
+  color: var(--white);
 }
 .hero-stats div span {
   font-size: 0.82rem;
@@ -229,10 +234,59 @@ h1, h2, h3 { font-family: var(--font-display); color: var(--navy); }
   color: rgba(255,255,255,0.85);
 }
 .hero-list li:last-child { border-bottom: none; }
-.hero-list li span:last-child { color: var(--gold-light); font-weight: 600; }
+.hero-list li span:last-child { color: rgba(255,255,255,0.9); font-weight: 600; }
+
+/* Find a Doctor — AKUH-style labeled select + search */
+.find-doctor-label {
+  display: block;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 12px;
+}
+.find-doctor-row {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+}
+.find-doctor-row select {
+  flex: 1;
+  min-width: 0;
+  appearance: none;
+  background: rgba(255,255,255,0.08);
+  color: var(--white);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.find-doctor-row select option {
+  color: var(--ink);
+  background: var(--white);
+}
+.find-doctor-row select:focus {
+  outline: none;
+  border-color: rgba(255,255,255,0.55);
+}
+.find-doctor-row .btn { flex-shrink: 0; }
+
+@keyframes doctorHighlight {
+  0%, 100% { border-color: rgba(26, 10, 110, 0.12); }
+  20%, 80% { border-color: var(--gold); }
+  50% { border-color: var(--gold-light); }
+}
+.doctor-card.is-highlighted {
+  animation: doctorHighlight 2s ease;
+  border-color: var(--gold);
+}
 
 /* ---------- Section shared ---------- */
-section { padding: 90px 0; }
+section { padding: 100px 0; }
 .section-head {
   text-align: center;
   max-width: 640px;
@@ -252,37 +306,93 @@ section { padding: 90px 0; }
 .bg-navy .section-head h2 { color: var(--white); }
 .bg-navy .section-head p { color: rgba(255,255,255,0.7); }
 
+/* ---------- About (editorial) ---------- */
+.about-section {
+  background: var(--white);
+  border-bottom: 1px solid rgba(26, 10, 110, 0.08);
+}
+.about-wrap {
+  max-width: 760px;
+}
+.about-intro h2 {
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
+  font-weight: 500;
+  margin-bottom: 22px;
+}
+.about-mission {
+  font-size: 1.12rem;
+  line-height: 1.7;
+  color: var(--grey);
+  max-width: 42em;
+}
+.about-block {
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(26, 10, 110, 0.1);
+}
+.about-block h3 {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 22px;
+}
+.about-block p {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--grey);
+  max-width: 40em;
+}
+.about-values {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.about-values li {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 20px;
+  align-items: baseline;
+}
+.about-values strong {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+.about-values span {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--grey);
+}
+@media (max-width: 600px) {
+  .about-values li {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+}
+
 /* ---------- Departments ---------- */
 .dept-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 22px;
+  gap: 16px;
 }
 .dept-card {
   background: var(--white);
   border-radius: var(--radius);
-  padding: 30px 26px;
-  box-shadow: var(--shadow-card);
-  border: 1px solid rgba(26,10,110,0.06);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  padding: 28px 24px;
+  border: var(--border);
+  transition: border-color 0.15s ease;
   position: relative;
-  overflow: hidden;
 }
-.dept-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-soft);
+.dept-card:hover { border: var(--border-hover); }
+/* Icon slot — replace .dept-icon contents with a simple line-icon SVG when available */
+.dept-icon {
+  display: none;
 }
-.dept-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 4px; height: 100%;
-  background: linear-gradient(180deg, var(--gold), var(--red));
-  opacity: 0;
-  transition: opacity 0.25s ease;
-}
-.dept-card:hover::before { opacity: 1; }
-.dept-icon { font-size: 1.8rem; margin-bottom: 14px; display: block; }
 .dept-card h3 { font-size: 1.08rem; margin-bottom: 8px; }
 .dept-card p { color: var(--grey); font-size: 0.92rem; }
 
@@ -295,15 +405,16 @@ section { padding: 90px 0; }
 }
 .feature-split .tag {
   display: inline-block;
-  background: rgba(201,162,39,0.14);
-  color: var(--gold);
+  background: transparent;
+  color: var(--navy);
   font-weight: 700;
   font-size: 0.75rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 6px 14px;
-  border-radius: 999px;
-  margin-bottom: 18px;
+  padding: 0;
+  border-radius: 0;
+  margin-bottom: 14px;
+  border-bottom: 2px solid var(--gold);
 }
 .feature-split h2 { font-size: 2rem; margin-bottom: 18px; }
 .feature-split p { color: var(--grey); margin-bottom: 26px; font-size: 1.02rem; }
@@ -313,7 +424,7 @@ section { padding: 90px 0; }
   gap: 0;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  border-radius: 20px;
+  border-radius: var(--radius);
   scrollbar-width: none;
 }
 .prosthetics-carousel::-webkit-scrollbar { display: none; }
@@ -342,37 +453,40 @@ section { padding: 90px 0; }
   color: var(--ink);
 }
 .feature-checks li::before {
-  content: '✓';
-  color: var(--red);
-  font-weight: 800;
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-top: 8px;
+  background: var(--navy);
   flex-shrink: 0;
 }
 
 /* ---------- Doctors ---------- */
 .doctor-group { margin-bottom: 46px; }
 .doctor-group h3 {
-  font-size: 1.1rem;
-  color: var(--gold);
+  font-size: 1rem;
+  color: rgba(255,255,255,0.9);
   font-family: var(--font-body);
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 20px;
   padding-bottom: 10px;
-  border-bottom: 2px solid rgba(201,162,39,0.25);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 .doctor-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 18px;
+  gap: 14px;
 }
 .doctor-card {
   background: var(--white);
   border-radius: var(--radius);
   padding: 22px 24px;
-  box-shadow: var(--shadow-card);
-  border-left: 3px solid var(--navy);
+  border: var(--border);
+  transition: border-color 0.15s ease;
 }
+.doctor-card:hover { border: var(--border-hover); }
 .doctor-card h4 { font-size: 1.05rem; color: var(--navy); margin-bottom: 6px; }
 .doctor-card .qual { font-size: 0.85rem; color: var(--grey); margin-bottom: 12px; }
 .doctor-card .avail {
@@ -386,8 +500,8 @@ section { padding: 90px 0; }
 
 /* ---------- Pharmacy ---------- */
 .pharmacy-strip {
-  background: linear-gradient(120deg, #fff 60%, rgba(201,162,39,0.06));
-  border: 1px solid rgba(201,162,39,0.25);
+  background: var(--white);
+  border: var(--border);
   border-radius: var(--radius);
   padding: 40px;
   display: flex;
@@ -402,7 +516,7 @@ section { padding: 90px 0; }
   background: var(--navy);
   color: var(--white);
   padding: 14px 26px;
-  border-radius: 12px;
+  border-radius: var(--radius);
   text-align: center;
   font-weight: 700;
   white-space: nowrap;
@@ -416,24 +530,19 @@ section { padding: 90px 0; }
   gap: 20px;
 }
 .promo-card {
-  background: linear-gradient(135deg, var(--navy-deep), var(--navy));
+  background: rgba(255,255,255,0.04);
   color: var(--white);
   border-radius: var(--radius);
-  padding: 30px;
+  padding: 28px;
   position: relative;
-  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.18);
+  transition: border-color 0.15s ease;
 }
-.promo-card::after {
-  content: '';
-  position: absolute;
-  width: 140px; height: 140px;
-  background: radial-gradient(circle, rgba(201,162,39,0.4), transparent 70%);
-  bottom: -50px; right: -50px;
-}
+.promo-card:hover { border-color: rgba(255,255,255,0.4); }
 .promo-card .price {
   font-family: var(--font-display);
-  font-size: 2.2rem;
-  color: var(--gold-light);
+  font-size: 2rem;
+  color: var(--white);
   margin: 12px 0;
 }
 .promo-card p.note { font-size: 0.8rem; color: rgba(255,255,255,0.6); margin-top: 14px; }
@@ -514,25 +623,21 @@ section { padding: 90px 0; }
 .dept-modal-overlay.open { display: flex; }
 .dept-modal {
   background: var(--white);
-  border-radius: 20px;
+  border-radius: var(--radius);
   max-width: 520px;
   width: 100%;
   max-height: 85vh;
   overflow-y: auto;
   padding: 36px;
   position: relative;
-  animation: modalIn 0.25s ease;
-}
-@keyframes modalIn {
-  from { opacity: 0; transform: translateY(14px) scale(0.98); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
+  border: var(--border);
 }
 .dept-modal-close {
   position: absolute;
   top: 20px; right: 20px;
   width: 34px; height: 34px;
-  border-radius: 50%;
-  border: none;
+  border-radius: var(--radius);
+  border: var(--border);
   background: var(--off-white);
   color: var(--navy);
   font-size: 1.1rem;
@@ -541,7 +646,8 @@ section { padding: 90px 0; }
   align-items: center;
   justify-content: center;
 }
-.dept-modal .icon { font-size: 2rem; margin-bottom: 10px; display: block; }
+/* Icon slot — replace with line-icon SVG when available */
+.dept-modal .icon { display: none; }
 .dept-modal h3 { font-size: 1.5rem; margin-bottom: 10px; }
 .dept-modal p.desc { color: var(--grey); margin-bottom: 24px; }
 .dept-modal .doctor-list-title {
@@ -551,6 +657,35 @@ section { padding: 90px 0; }
   text-transform: uppercase;
   color: var(--gold);
   margin-bottom: 12px;
+}
+.dept-modal .test-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  margin-bottom: 16px;
+  border: var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.dept-modal .test-list li {
+  padding: 10px 14px;
+  font-size: 0.88rem;
+  color: var(--ink);
+  border-bottom: 1px solid rgba(26, 10, 110, 0.08);
+  border-right: 1px solid rgba(26, 10, 110, 0.08);
+}
+.dept-modal .test-list li:nth-child(2n) { border-right: none; }
+.dept-modal .test-list li:nth-last-child(-n+2) { border-bottom: none; }
+.dept-modal .test-note {
+  font-size: 0.88rem;
+  margin-bottom: 20px;
+}
+@media (max-width: 480px) {
+  .dept-modal .test-list { grid-template-columns: 1fr; }
+  .dept-modal .test-list li { border-right: none; }
+  .dept-modal .test-list li:last-child { border-bottom: none; }
+  .dept-modal .test-list li:nth-last-child(-n+2) { border-bottom: 1px solid rgba(26, 10, 110, 0.08); }
+  .dept-modal .test-list li:last-child { border-bottom: none; }
 }
 .dept-modal .doc-row {
   border-left: 3px solid var(--navy);
@@ -604,14 +739,24 @@ section { padding: 90px 0; }
   gap: 24px;
   margin-top: 40px;
 }
-.trust-card { text-align: center; padding: 20px; }
-.trust-card .num {
-  font-family: var(--font-display);
-  font-size: 1.6rem;
-  color: var(--gold);
-  margin-bottom: 10px;
+.trust-card {
+  text-align: left;
+  padding: 24px;
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: var(--radius);
+  transition: border-color 0.15s ease;
 }
-.trust-card p { font-size: 0.9rem; color: var(--grey); }
+.trust-card:hover { border-color: rgba(255,255,255,0.4); }
+.trust-card .num {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 12px;
+}
+.trust-card p { font-size: 0.95rem; color: rgba(255,255,255,0.85); }
 
 /* ---------- Blog preview ---------- */
 .blog-grid {
@@ -623,13 +768,13 @@ section { padding: 90px 0; }
   background: var(--white);
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: var(--shadow-card);
-  transition: transform 0.25s ease;
+  border: var(--border);
+  transition: border-color 0.15s ease;
 }
-.blog-card:hover { transform: translateY(-6px); }
+.blog-card:hover { border: var(--border-hover); transform: none; }
 .blog-card .thumb {
-  height: 160px;
-  background: linear-gradient(135deg, var(--navy), var(--red));
+  height: 140px;
+  background: var(--navy);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -687,14 +832,15 @@ footer a { color: var(--gold-light); }
   z-index: 90;
   background: var(--navy);
   color: var(--white);
-  width: 58px; height: 58px;
-  border-radius: 50%;
+  width: 52px; height: 52px;
+  border-radius: var(--radius);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 24px rgba(26,10,110,0.4);
-  font-size: 1.5rem;
-  border: 2px solid var(--gold);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border: 1px solid rgba(255,255,255,0.2);
 }
 
 /* ---------- Blog / Article pages ---------- */
