@@ -1,17 +1,19 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Subtle shadow on nav after scroll
+// Subtle border emphasis on nav after scroll (no heavy shadow)
 const nav = document.querySelector('.nav');
 window.addEventListener('scroll', () => {
-  nav.style.boxShadow = window.scrollY > 20 ? '0 4px 20px rgba(26,10,110,0.08)' : 'none';
+  nav.style.borderBottomColor = window.scrollY > 20 ? 'rgba(26,10,110,0.18)' : 'rgba(26,10,110,0.08)';
 });
 
 const WA_NUMBER = '923356733777';
 
 // ---------- Department data (doctor assignments match the Doctors section) ----------
+// Icons: emoji removed for a restrained institutional look.
+// TODO: replace each empty icon with a simple line-icon SVG when available.
 const DEPARTMENTS = {
   dental: {
-    icon: '🦷',
+    icon: '', // TODO: line-icon SVG
     name: 'Dental Care',
     desc: 'General dentistry, root canal treatment, crowns, fillings, and paediatric dental care — for both children and adults.',
     doctors: [
@@ -20,7 +22,7 @@ const DEPARTMENTS = {
     ]
   },
   aesthetics: {
-    icon: '✨',
+    icon: '', // TODO: line-icon SVG
     name: 'Aesthetics & Skin',
     desc: 'Hydrafacial, whitening drip, and glutathione infusion treatments for skin brightening and rejuvenation.',
     doctors: [
@@ -29,7 +31,7 @@ const DEPARTMENTS = {
     ]
   },
   gynae: {
-    icon: '👩‍⚕️',
+    icon: '', // TODO: line-icon SVG
     name: 'Gynaecology',
     desc: 'Consultant gynaecologists and sonologists providing women\'s health consultations and ultrasound-based diagnostics.',
     doctors: [
@@ -38,7 +40,7 @@ const DEPARTMENTS = {
     ]
   },
   ent: {
-    icon: '👂',
+    icon: '', // TODO: line-icon SVG
     name: 'ENT',
     desc: 'Ear, nose & throat consultation and surgical care.',
     doctors: [
@@ -46,7 +48,7 @@ const DEPARTMENTS = {
     ]
   },
   pediatrics: {
-    icon: '🧒',
+    icon: '', // TODO: line-icon SVG
     name: 'Pediatrics',
     desc: 'Family physician consultation for children, alongside paediatric dental care.',
     doctors: [
@@ -55,7 +57,7 @@ const DEPARTMENTS = {
     ]
   },
   ortho: {
-    icon: '🦴',
+    icon: '', // TODO: line-icon SVG
     name: 'Orthopedics',
     desc: 'Orthopaedic surgery consultation and treatment for bone, joint, and musculoskeletal conditions.',
     doctors: [
@@ -63,7 +65,7 @@ const DEPARTMENTS = {
     ]
   },
   imaging: {
-    icon: '🩻',
+    icon: '', // TODO: line-icon SVG
     name: 'Ultrasound & X-Ray',
     desc: 'On-site digital X-ray and ultrasound imaging, with sonologist-reviewed reporting.',
     doctors: [
@@ -71,13 +73,13 @@ const DEPARTMENTS = {
     ]
   },
   lab: {
-    icon: '🔬',
+    icon: '', // TODO: line-icon SVG
     name: 'Laboratory & Diagnostics',
     desc: 'Full sample collection and diagnostic processing on-site, with home collection available on request.',
     doctors: []
   },
   physio: {
-    icon: '🏃',
+    icon: '', // TODO: line-icon SVG
     name: 'Physiotherapy',
     desc: 'Manual and sports therapy with rehabilitation specialists for injury recovery and mobility support.',
     doctors: [
@@ -86,7 +88,7 @@ const DEPARTMENTS = {
     ]
   },
   eye: {
-    icon: '👁️',
+    icon: '', // TODO: line-icon SVG
     name: 'Eye Care',
     desc: 'Eye specialists and surgeons for vision correction, screening, and eye health.',
     doctors: [
@@ -103,7 +105,8 @@ Object.entries(DEPARTMENTS).forEach(([key, d]) => {
   card.className = 'dept-card';
   card.setAttribute('onclick', `openDept('${key}')`);
   card.innerHTML = `
-    <span class="dept-icon">${d.icon}</span>
+    <!-- TODO: line-icon SVG for ${d.name} goes in .dept-icon -->
+    <span class="dept-icon" aria-hidden="true"></span>
     <h3>${d.name}</h3>
     <p>${d.desc}</p>
     <span class="learn">Doctors & availability →</span>
@@ -123,17 +126,18 @@ function openDept(key) {
         <div class="doc-row">
           <h4>${doc.name}</h4>
           <p class="qual">${doc.qual}</p>
-          <p class="avail">🕒 ${doc.avail}</p>
+          <p class="avail">${doc.avail}</p>
         </div>`).join('')
     : `<p class="desc" style="margin-top:-10px;">On-site technicians handle this department daily — no fixed consultant schedule. Message us to confirm timing.</p>`;
 
   content.innerHTML = `
     <button class="dept-modal-close" onclick="closeDept()" aria-label="Close">✕</button>
-    <span class="icon">${d.icon}</span>
+    <!-- TODO: line-icon SVG for ${d.name} goes in .icon -->
+    <span class="icon" aria-hidden="true"></span>
     <h3>${d.name}</h3>
     <p class="desc">${d.desc}</p>
     ${doctorsHtml}
-    <a href="https://wa.me/${WA_NUMBER}?text=${waMsg}" class="btn btn-gold" target="_blank" rel="noopener">📱 Book on WhatsApp</a>
+    <a href="https://wa.me/${WA_NUMBER}?text=${waMsg}" class="btn btn-navy" target="_blank" rel="noopener">Book on WhatsApp</a>
   `;
   overlay.classList.add('open');
   document.body.style.overflow = 'hidden';
