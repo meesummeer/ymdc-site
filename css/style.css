@@ -309,15 +309,19 @@ section { padding: 100px 0; }
 /* ---------- About (editorial) ---------- */
 .about-section {
   background: var(--white);
-  border-bottom: 1px solid rgba(26, 10, 110, 0.08);
+}
+.about-page {
+  padding-top: 140px;
+  padding-bottom: 100px;
+  min-height: 70vh;
 }
 .about-wrap {
   max-width: 760px;
 }
-.about-intro h2 {
-  font-size: clamp(1.9rem, 3vw, 2.5rem);
+.about-intro h1 {
+  font-size: clamp(2rem, 3.4vw, 2.8rem);
   font-weight: 500;
-  margin-bottom: 22px;
+  margin-bottom: 8px;
 }
 .about-mission {
   font-size: 1.12rem;
@@ -330,7 +334,12 @@ section { padding: 100px 0; }
   padding-top: 40px;
   border-top: 1px solid rgba(26, 10, 110, 0.1);
 }
-.about-block h3 {
+.about-block-first {
+  margin-top: 40px;
+  padding-top: 0;
+  border-top: none;
+}
+.about-block h2 {
   font-family: var(--font-body);
   font-size: 0.78rem;
   font-weight: 700;
@@ -348,30 +357,19 @@ section { padding: 100px 0; }
 .about-values {
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 16px;
 }
 .about-values li {
-  display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 20px;
-  align-items: baseline;
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--grey);
+  max-width: 40em;
+  padding-left: 0;
 }
 .about-values strong {
   font-family: var(--font-body);
-  font-size: 0.95rem;
   font-weight: 700;
   color: var(--navy);
-}
-.about-values span {
-  font-size: 1rem;
-  line-height: 1.65;
-  color: var(--grey);
-}
-@media (max-width: 600px) {
-  .about-values li {
-    grid-template-columns: 1fr;
-    gap: 6px;
-  }
 }
 
 /* ---------- Departments ---------- */
