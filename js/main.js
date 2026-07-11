@@ -90,7 +90,7 @@ const DEPARTMENTS = {
     name: 'Eye Care',
     desc: 'Eye specialists and surgeons for vision correction, screening, and eye health.',
     doctors: [
-      { name: 'Dr. Farrukh', qual: 'Eye Specialist', avail: 'Mon–Sat, 1:00pm – 3:00pm' },
+      { name: 'Farrukh', qual: 'Optometrist', avail: 'Mon–Sat, 1:00pm – 3:00pm' },
       { name: 'Dr. Maqbool Hussain', qual: 'Eye Surgeon', avail: 'Tuesday, 6:00pm – 8:00pm' }
     ]
   }
@@ -144,8 +144,12 @@ function closeDept() {
 }
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDept(); });
 
-// ---------- Promotions carousel arrows ----------
+// ---------- Carousel arrows (promos + prosthetics) ----------
 function scrollCarousel(id, dir) {
   const el = document.getElementById(id);
-  el.scrollBy({ left: dir * 320, behavior: 'smooth' });
+  const slide = el.children[0];
+  const styles = getComputedStyle(el);
+  const gap = parseFloat(styles.columnGap || styles.gap) || 0;
+  const amount = slide ? slide.getBoundingClientRect().width + gap : 320;
+  el.scrollBy({ left: dir * amount, behavior: 'smooth' });
 }
