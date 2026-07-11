@@ -449,9 +449,10 @@ section { padding: 100px 0; }
   scroll-snap-align: start;
   flex: 0 0 100%;
   min-width: 100%;
-  aspect-ratio: 4 / 3.2;
-  background-color: var(--navy-deep);
-  background-size: cover;
+  aspect-ratio: 3 / 4;
+  background-color: var(--off-white);
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
 }
 #prosthetics .carousel-arrows { margin-top: 16px; }
